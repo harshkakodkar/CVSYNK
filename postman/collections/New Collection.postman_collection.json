@@ -1,0 +1,427 @@
+{
+  "info": {
+    "_postman_id": "92103d6e-46c8-4cee-b0c5-c75ddc0020ff",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://127.0.0.1:8000/api/register/company",
+      "id": "faf9486a-70a3-44ad-8732-c43f1821d342",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"ABC Company\",\r\n  \"email\": \"abc123@example.com\",\r\n  \"password\": \"password123\",\r\n  \"address\": \"123 Street\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/register/company",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "register",
+            "company"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/register/candidate",
+      "id": "94fc0206-2882-4f7f-9efb-ef64c7c093c0",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Harsh\",\r\n  \"email\": \"harsh@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"skills\": \"React, PHP, Java\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/register/candidate",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "register",
+            "candidate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/login",
+      "id": "8eb1d8fa-215f-4e3d-b049-9d39c02ad140",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"abc123@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company/jobs",
+      "id": "eada868a-bea0-4f17-829e-2ca4c83b6fac",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "18|1jPAM6XVwsoNMV3QJhsM4quxd7K26NkPSMeMGoHM70301265",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Frontend Developer\",\r\n  \"description\": \"Looking for React.js developer\",\r\n  \"company_uuid\": \"86cc63c1-d73a-11f0-b40a-b48c9d8beb6a\",\r\n  \"salary_from\": 20000,\r\n  \"salary_to\": 40000,\r\n  \"status\": \"active\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company/jobs",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company",
+            "jobs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company/jobs",
+      "id": "816aaf8e-b92f-476f-8a45-58210ef0aeee",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "18|1jPAM6XVwsoNMV3QJhsM4quxd7K26NkPSMeMGoHM70301265",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company/jobs",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company",
+            "jobs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company/jobs/3fa4a42f-cd3a-4eaa-b236-8a4c7b35a69e",
+      "id": "de18347a-91a5-4206-a20a-6148165ddb57",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "45|dQYb2RzL4YsIAUE5sUL7YBe6UHGywN0zNvQ17ZDebb52c4f0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Senior Java Developer\",\r\n  \"description\": \"Updated description\",\r\n  \"location\": \"Mumbai\",\r\n  \"salary\": \"70000\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company/jobs/3fa4a42f-cd3a-4eaa-b236-8a4c7b35a69e",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company",
+            "jobs",
+            "3fa4a42f-cd3a-4eaa-b236-8a4c7b35a69e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/company/jobs/8e54c3f9-a82e-4dc0-80f8-09e5c11593d4",
+      "id": "3115e494-0714-46ea-82b0-fbd9eea4c784",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "45|dQYb2RzL4YsIAUE5sUL7YBe6UHGywN0zNvQ17ZDebb52c4f0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/company/jobs/8e54c3f9-a82e-4dc0-80f8-09e5c11593d4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "company",
+            "jobs",
+            "8e54c3f9-a82e-4dc0-80f8-09e5c11593d4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/jobs/3fa4a42f-cd3a-4eaa-b236-8a4c7b35a69e/applications",
+      "id": "7ed610e5-b7c3-48c0-a939-a900559a6035",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "45|dQYb2RzL4YsIAUE5sUL7YBe6UHGywN0zNvQ17ZDebb52c4f0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/jobs/3fa4a42f-cd3a-4eaa-b236-8a4c7b35a69e/applications",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "jobs",
+            "3fa4a42f-cd3a-4eaa-b236-8a4c7b35a69e",
+            "applications"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "7805342a-a611-4287-8baa-ada92a046c55",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"harshkakodkar111@gmail.com\",\r\n  \"password\": \"1234567\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/jobs/a0bcc92a-ae0e-4dfd-9f4d-4691c21460c2/apply",
+      "id": "fb03d7bd-31e8-4925-b259-8760d28260be",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "46|MV56GSZn9Pc99zc68XpvIMHDhePSaFRaQXosqyjB94330927",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/jobs/a0bcc92a-ae0e-4dfd-9f4d-4691c21460c2/apply",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "jobs",
+            "a0bcc92a-ae0e-4dfd-9f4d-4691c21460c2",
+            "apply"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:8000/api/my-applications",
+      "id": "0a1802d2-8590-4867-87ad-b60cfdb3502e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "46|MV56GSZn9Pc99zc68XpvIMHDhePSaFRaQXosqyjB94330927",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/my-applications",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "my-applications"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "id": "835d8452-0cbd-4fd5-a4f0-39a656402995",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
